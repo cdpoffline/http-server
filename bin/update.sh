@@ -1,13 +1,13 @@
 #!/bin/bash
 
-cd "`dirname $0`"
+cd "`dirname \"$0\"`"
 
 conf_path="`realpath ../nginx.conf`"
 conf_linkpath="/etc/nginx/sites-enabled/offline-material"
 
 www_path="`realpath ../web/`"
 www_linkpath="/var/www/offline-material"
-sudo mkdir -p "`realpath \"$www_linkpath/..\"`"
+sudo mkdir -p /var/www
 
 sudo rm -f "/etc/nginx/sites-enabled/default"
 
